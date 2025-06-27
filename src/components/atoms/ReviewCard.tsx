@@ -4,17 +4,11 @@ import { StartHalfIcon } from '../../icons/StartHalfIcon';
 interface ReviewCardProps {
   avatarUri: string;
   name: string;
-  rate: number;
+  rate?: number;
   comment: string;
 }
 
-export const ReviewCard = ({
-  avatarUri,
-  name,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  rate,
-  comment
-}: ReviewCardProps) => {
+export const ReviewCard = ({ avatarUri, name, comment }: ReviewCardProps) => {
   return (
     <div className="flex h-[12.625rem] flex-col justify-center gap-4 rounded-2xl bg-white px-6 lg:max-w-[20.6875rem]">
       <div className="flex items-center gap-4">
