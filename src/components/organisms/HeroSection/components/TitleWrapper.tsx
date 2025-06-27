@@ -13,17 +13,13 @@ export const TitleWrapper = () => {
       <div className="flex gap-8">
         <Button
           label={translations.content.buttons.orderNow}
-          onClick={() => {
-            console.log('order button');
-          }}
+          onClick={() => {}}
           isSecondary
         />
 
         <Button
           label={translations.content.buttons.bookTable}
-          onClick={() => {
-            console.log('order button');
-          }}
+          onClick={() => {}}
         />
       </div>
     </div>

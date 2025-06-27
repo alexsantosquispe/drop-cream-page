@@ -9,7 +9,7 @@ const menuItems = [
 ];
 
 const menuItemStyle =
-  'text-white hover:cursor-pointer hover:text-black hover:bg-white px-3 py-1 rounded-lg';
+  'text-white hover:cursor-pointer hover:bg-white/15 hover:backdrop-blur px-3 py-1 rounded-lg';
 
 const Header = () => {
   return (

@@ -2,6 +2,7 @@ import { twMerge } from 'tailwind-merge';
 import { translations } from '../../../../constants/translations';
 import Button from '../../../atoms/Button';
 import cn from 'clsx';
+import { Counter } from './Counter';
 
 interface IceCreamCardProps {
   name: string;
@@ -11,7 +12,7 @@ interface IceCreamCardProps {
   isTrendy?: boolean;
 }
 
-const cardButtonStyle = 'h-10 w-[8.6875rem] rounded-[0.4375rem] p-0 text-lg';
+const cardButtonStyle = 'h-10 rounded-[0.4375rem] p-0 text-lg';
 
 export const IceCreamCard = ({
   name,
@@ -29,7 +30,7 @@ export const IceCreamCard = ({
     >
       <img src={path} alt={name} className="h-[17rem] w-[17rem]" />
 
-      <div className="flex w-full flex-col gap-4 pr-[2.625rem]">
+      <div className="flex w-full flex-col gap-4 pr-[3rem]">
         <h2 className="text-[1.75rem] font-medium">{name}</h2>
 
         <div className="flex flex-col gap-y-3">
@@ -39,9 +40,7 @@ export const IceCreamCard = ({
           <div className="flex gap-x-8">
             <Button
               label={translations.content.trending.card.onTable}
-              onClick={() => {
-                console.log('on table');
-              }}
+              onClick={() => {}}
               className={twMerge(
                 cardButtonStyle,
                 cn({
@@ -53,9 +52,7 @@ export const IceCreamCard = ({
             />
             <Button
               label={translations.content.trending.card.delivery}
-              onClick={() => {
-                console.log('on table');
-              }}
+              onClick={() => {}}
               className={twMerge(
                 cardButtonStyle,
                 cn({
@@ -68,9 +65,9 @@ export const IceCreamCard = ({
           </div>
         </div>
 
-        <div className="flex justify-between text-[1.75rem]">
+        <div className="flex items-center justify-between text-[1.75rem]">
           <span>{`${currency} ${price}/-`}</span>
-          <div>counter</div>
+          <Counter className={cn({ 'border-black': isTrendy })} />
         </div>
       </div>
     </div>

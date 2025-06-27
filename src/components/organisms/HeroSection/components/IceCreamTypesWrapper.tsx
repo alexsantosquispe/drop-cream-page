@@ -18,30 +18,22 @@ export const IceCreamTypesWrapper = () => {
         <Button
           icon={<IceCreamCupIcon />}
           className={iconButtonStyles}
-          onClick={() => {
-            console.log('ice cream type');
-          }}
+          onClick={() => {}}
         />
         <Button
           icon={<IceCreamCupAltIcon />}
           className={iconButtonStyles}
-          onClick={() => {
-            console.log('ice cream type');
-          }}
+          onClick={() => {}}
         />
         <Button
           icon={<IceCreamConeIcon />}
           className={iconButtonStyles}
-          onClick={() => {
-            console.log('ice cream type');
-          }}
+          onClick={() => {}}
         />
         <Button
           icon={<CirclePlusIcon />}
           className={iconButtonStyles}
-          onClick={() => {
-            console.log('ice cream type');
-          }}
+          onClick={() => {}}
         />
       </div>
     </div>

@@ -11,10 +11,10 @@ interface ReviewCardProps {
 export const ReviewCard = ({
   avatarUri,
   name,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   rate,
   comment
 }: ReviewCardProps) => {
-  console.log(rate);
   return (
     <div className="flex h-[12.625rem] max-w-[20.6875rem] flex-col justify-center gap-4 rounded-2xl bg-white px-6">
       <div className="flex items-center gap-4">

@@ -30,8 +30,8 @@ export const translations = {
   footer: {
     designedBy: 'Designed by',
     author: {
-      name: 'Anchal',
-      url: 'https://www.figma.com/@anchal_creation'
+      name: 'designr',
+      url: 'https://www.figma.com/@dsingr'
     },
     developedBy: 'Developed by',
     dev: {

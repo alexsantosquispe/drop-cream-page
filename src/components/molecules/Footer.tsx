@@ -6,7 +6,7 @@ import { InstagramIcon } from '../../icons/InstagramIcon';
 import { XIcon } from '../../icons/XIcon';
 
 const socialMediaStyle =
-  'flex h-[2.4375rem] w-[2.4375rem] items-center justify-center rounded-full';
+  'flex h-[2.4375rem] w-[2.4375rem] items-center justify-center rounded-full hover:cursor-pointer';
 const Footer = () => {
   return (
     <div className="flex w-full items-center justify-between">
