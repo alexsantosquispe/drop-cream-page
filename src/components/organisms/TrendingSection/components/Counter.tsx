@@ -10,7 +10,7 @@ interface CounterProps {
 }
 
 const counterButtonStyle =
-  'px-4 py-2 text-sm hover:cursor-pointer hover:bg-white/15';
+  'flex items-center justify-center px-4 py-2 text-sm hover:cursor-pointer hover:bg-white/15';
 
 export const Counter = ({ className }: CounterProps) => {
   const [count, setCount] = useState(1);

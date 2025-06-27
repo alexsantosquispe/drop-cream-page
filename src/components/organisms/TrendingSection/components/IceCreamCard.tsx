@@ -24,20 +24,26 @@ export const IceCreamCard = ({
   return (
     <div
       className={twMerge(
-        'flex w-full items-center gap-5 rounded-3xl border border-white/40 bg-black/15 px-[2rem] py-4 backdrop-blur-lg',
+        'flex w-full flex-col items-center gap-5 rounded-3xl border border-white/40 bg-black/15 backdrop-blur-lg md:gap-0 md:py-4 lg:flex-row lg:px-8',
         cn({ 'bg-white text-black': isTrendy })
       )}
     >
-      <img src={path} alt={name} className="h-[17rem] w-[17rem]" />
+      <img
+        src={path}
+        alt={name}
+        className="h-[20rem] w-[20rem] md:h-[16rem] md:w-[16rem]"
+      />
 
-      <div className="flex w-full flex-col gap-4 pr-[3rem]">
-        <h2 className="text-[1.75rem] font-medium">{name}</h2>
+      <div className="flex w-full flex-col gap-8 pb-8 md:gap-4 lg:pb-0 xl:pr-[3rem]">
+        <h2 className="text-center text-[1.75rem] font-semibold md:text-left md:font-medium">
+          {name}
+        </h2>
 
         <div className="flex flex-col gap-y-3">
           <span className="text-xl font-medium">
             {translations.content.trending.card.orderType}
           </span>
-          <div className="flex gap-x-8">
+          <div className="flex gap-x-8 text-lg">
             <Button
               label={translations.content.trending.card.onTable}
               onClick={() => {}}

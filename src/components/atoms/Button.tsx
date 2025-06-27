@@ -20,7 +20,7 @@ const Button = ({
   return (
     <button
       className={twMerge(
-        'flex max-h-[5.375rem] w-full max-w-[16.5rem] items-center justify-center rounded-[0.625rem] bg-white/15 py-7 text-[2rem] font-normal text-white/90 backdrop-blur hover:cursor-pointer hover:bg-white/20 hover:text-white',
+        'flex w-full items-center justify-center rounded-[0.625rem] bg-white/15 py-7 text-[2rem] font-normal text-white/90 backdrop-blur hover:cursor-pointer hover:bg-white/20 hover:text-white md:max-h-[5.375rem] md:max-w-[16.5rem]',
         cn({
           'border border-white/80 bg-transparent backdrop-blur-none':
             isSecondary

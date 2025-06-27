@@ -34,10 +34,9 @@ const iceCreams = [
 
 export const TrendingSection = () => {
   return (
-    <div className="flex w-full flex-col gap-[2.6875rem]">
+    <div className="flex w-full flex-col gap-4 px-4 md:gap-[2.6875rem] lg:p-0">
       <TrendingButton />
-
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid-col-1 grid gap-4 lg:grid-cols-2 xl:gap-10">
         {iceCreams.map((item) => (
           <IceCreamCard key={`${item.name}-${item.price}`} {...item} />
         ))}

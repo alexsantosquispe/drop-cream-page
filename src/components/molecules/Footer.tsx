@@ -7,10 +7,11 @@ import { XIcon } from '../../icons/XIcon';
 
 const socialMediaStyle =
   'flex h-[2.4375rem] w-[2.4375rem] items-center justify-center rounded-full hover:cursor-pointer';
+
 const Footer = () => {
   return (
-    <div className="flex w-full items-center justify-between">
-      <div className="flex w-full gap-x-4 font-light">
+    <div className="flex w-full flex-col-reverse items-center justify-center gap-8 md:justify-between lg:flex-row">
+      <div className="flex flex-1 justify-center gap-x-4 text-sm font-light md:justify-start md:text-base">
         <span>
           {`${translations.footer.designedBy} `}
           <a
@@ -36,7 +37,7 @@ const Footer = () => {
         </span>
       </div>
 
-      <div className="flex gap-x-11">
+      <div className="flex flex-1 justify-end gap-x-11">
         <a className={twMerge(socialMediaStyle, 'bg-white')}>
           <GoogleIcon className="size-[2.4375rem]" />
         </a>

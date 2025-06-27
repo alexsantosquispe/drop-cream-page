@@ -8,7 +8,10 @@ export const translations = {
     }
   },
   content: {
-    title: 'Red Flower Ice-cream',
+    title: {
+      line1: 'Red Flower',
+      line2: 'Ice-cream'
+    },
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     buttons: {

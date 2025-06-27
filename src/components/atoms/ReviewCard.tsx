@@ -16,7 +16,7 @@ export const ReviewCard = ({
   comment
 }: ReviewCardProps) => {
   return (
-    <div className="flex h-[12.625rem] max-w-[20.6875rem] flex-col justify-center gap-4 rounded-2xl bg-white px-6">
+    <div className="flex h-[12.625rem] flex-col justify-center gap-4 rounded-2xl bg-white px-6 lg:max-w-[20.6875rem]">
       <div className="flex items-center gap-4">
         <div className="h-[3.625rem] w-[3.625rem] rounded-full bg-red-500">
           {avatarUri}

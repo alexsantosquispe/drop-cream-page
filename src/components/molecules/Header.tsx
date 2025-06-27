@@ -24,7 +24,7 @@ const Header = () => {
         </span>
       </div>
 
-      <nav className="flex text-2xl">
+      <nav className="hidden text-2xl md:flex">
         <ul className="flex items-center gap-x-10">
           {menuItems.map((item) => (
             <li key={item} className={menuItemStyle}>
