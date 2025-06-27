@@ -1,24 +1,36 @@
 import cn from 'clsx';
+import type { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface ButtonProps {
-  label: string;
   onClick: () => void;
+  label?: string;
+  icon?: ReactNode;
   isSecondary?: boolean;
+  className?: string;
 }
 
-const Button = ({ label, onClick, isSecondary }: ButtonProps) => {
+const Button = ({
+  label,
+  icon,
+  onClick,
+  isSecondary,
+  className
+}: ButtonProps) => {
   return (
     <button
       className={twMerge(
-        'flex max-h-[5.375rem] w-full max-w-[16.5rem] items-center justify-center rounded-[0.625rem] bg-white/15 py-7 text-[2rem] font-normal text-white backdrop-blur',
+        'flex max-h-[5.375rem] w-full max-w-[16.5rem] items-center justify-center rounded-[0.625rem] bg-white/15 py-7 text-[2rem] font-normal text-white/90 backdrop-blur hover:cursor-pointer hover:bg-white/20 hover:text-white',
         cn({
-          'border border-white bg-transparent backdrop-blur-none': isSecondary
-        })
+          'border border-white/80 bg-transparent backdrop-blur-none':
+            isSecondary
+        }),
+        className
       )}
       onClick={onClick}
     >
-      {label}
+      {label && label}
+      {icon && icon}
     </button>
   );
 };

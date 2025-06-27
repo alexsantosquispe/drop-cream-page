@@ -27,5 +27,16 @@ export const translations = {
       }
     }
   },
-  footer: 'Dropcream.com © all right reserve'
+  footer: {
+    designedBy: 'Designed by',
+    author: {
+      name: 'Anchal',
+      url: 'https://www.figma.com/@anchal_creation'
+    },
+    developedBy: 'Developed by',
+    dev: {
+      name: 'Alex Santos',
+      url: 'https://github.com/alexsantosquispe'
+    }
+  }
 };

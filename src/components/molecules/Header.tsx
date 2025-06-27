@@ -8,7 +8,8 @@ const menuItems = [
   translations.header.menu.closeBy
 ];
 
-const menuItemStyle = 'text-white/80 hover:cursor-pointer hover:text-white';
+const menuItemStyle =
+  'text-white hover:cursor-pointer hover:text-black hover:bg-white px-3 py-1 rounded-lg';
 
 const Header = () => {
   return (
@@ -24,7 +25,7 @@ const Header = () => {
       </div>
 
       <nav className="flex text-2xl">
-        <ul className="flex items-center gap-x-12">
+        <ul className="flex items-center gap-x-10">
           {menuItems.map((item) => (
             <li key={item} className={menuItemStyle}>
               {item}
