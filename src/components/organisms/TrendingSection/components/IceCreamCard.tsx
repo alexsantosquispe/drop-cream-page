@@ -67,7 +67,13 @@ export const IceCreamCard = ({
 
         <div className="flex items-center justify-between text-[1.75rem]">
           <span>{`${currency} ${price}/-`}</span>
-          <Counter className={cn({ 'border-black': isTrendy })} />
+          <Counter
+            className={{
+              container: cn({ 'border-black': isTrendy }),
+              addButton: cn({ 'hover:bg-black hover:text-white': isTrendy }),
+              minusButton: cn({ 'hover:bg-black hover:text-white': isTrendy })
+            }}
+          />
         </div>
       </div>
     </div>

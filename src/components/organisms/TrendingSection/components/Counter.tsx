@@ -1,10 +1,18 @@
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
+interface CounterProps {
+  className?: {
+    container?: string;
+    addButton?: string;
+    minusButton?: string;
+  };
+}
+
 const counterButtonStyle =
   'px-4 py-2 text-sm hover:cursor-pointer hover:bg-white/15';
 
-export const Counter = ({ className }: { className?: string }) => {
+export const Counter = ({ className }: CounterProps) => {
   const [count, setCount] = useState(1);
 
   const increment = () => {
@@ -19,11 +27,15 @@ export const Counter = ({ className }: { className?: string }) => {
     <div
       className={twMerge(
         'flex overflow-hidden rounded-[0.625rem] border border-white/80',
-        className
+        className?.container
       )}
     >
       <button
-        className={twMerge(counterButtonStyle, 'border-r')}
+        className={twMerge(
+          counterButtonStyle,
+          'border-r',
+          className?.addButton
+        )}
         onClick={increment}
       >
         +
@@ -32,7 +44,11 @@ export const Counter = ({ className }: { className?: string }) => {
         {count}
       </span>
       <button
-        className={twMerge(counterButtonStyle, 'border-l')}
+        className={twMerge(
+          counterButtonStyle,
+          'border-l',
+          className?.minusButton
+        )}
         onClick={decrement}
       >
         -
