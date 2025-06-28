@@ -5,7 +5,7 @@ import { TrendingSection } from './components/organisms/TrendingSection/Trending
 
 function App() {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-[url('/img/bg.webp')] bg-cover py-4 md:pt-20 md:pb-8">
+    <div className="flex min-h-screen w-full flex-col bg-[url('/img/bg.webp')] bg-cover bg-center py-4 md:pt-20 md:pb-8 lg:bg-cover">
       <div className="flex w-full max-w-[96.375rem] flex-col gap-16 self-center lg:gap-y-[6.875rem] lg:px-4">
         <Header />
         <main className="flex flex-col gap-y-[6.875rem]">
