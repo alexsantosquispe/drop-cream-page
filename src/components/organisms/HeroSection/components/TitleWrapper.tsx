@@ -1,5 +1,5 @@
-import { translations } from '../../../../constants/translations';
 import Button from '../../../atoms/Button';
+import { translations } from '../../../../constants/translations';
 
 export const TitleWrapper = () => {
   return (
@@ -12,7 +12,8 @@ export const TitleWrapper = () => {
       <p className="text-lg leading-[1.875rem] font-medium text-white/85 md:p-0 md:text-2xl">
         {translations.content.description}
       </p>
-      <div className="flex gap-8">
+
+      <div className="flex w-full gap-8 md:justify-center lg:justify-start">
         <Button
           label={translations.content.buttons.orderNow}
           onClick={() => {}}
