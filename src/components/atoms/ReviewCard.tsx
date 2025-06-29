@@ -19,7 +19,7 @@ export const ReviewCard = ({
   return (
     <div
       className={twMerge(
-        'flex h-[12.625rem] flex-col justify-center gap-4 rounded-2xl bg-white px-7 shadow-2xl md:max-w-[20.6875rem]',
+        'flex h-[12.625rem] max-w-[20.6875rem] flex-col justify-center gap-4 rounded-2xl bg-white px-7 shadow-2xl',
         className
       )}
     >
