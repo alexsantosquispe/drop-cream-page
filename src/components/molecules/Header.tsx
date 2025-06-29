@@ -1,6 +1,6 @@
-import { translations } from '../../constants/translations';
 import { MenuIcon } from '../../icons/MenuIcon';
 import { SearchIcon } from '../../icons/SearchIcon';
+import { translations } from '../../constants/translations';
 
 const menuItems = [
   translations.header.menu.home,
@@ -25,7 +25,7 @@ const Header = () => {
       </div>
 
       <nav className="hidden text-2xl md:flex">
-        <ul className="flex items-center gap-x-10">
+        <ul className="flex items-center gap-x-4">
           {menuItems.map((item) => (
             <li key={item} className={menuItemStyle}>
               {item}

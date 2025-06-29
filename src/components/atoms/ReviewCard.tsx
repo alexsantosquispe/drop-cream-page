@@ -1,31 +1,34 @@
-import { StarIcon } from '../../icons/StarIcon';
-import { StartHalfIcon } from '../../icons/StartHalfIcon';
+import { RateStars } from './RateStars';
+import { twMerge } from 'tailwind-merge';
 
 interface ReviewCardProps {
   avatarUri: string;
   name: string;
-  rate?: number;
+  rate: number;
   comment: string;
+  className?: string;
 }
 
-export const ReviewCard = ({ avatarUri, name, comment }: ReviewCardProps) => {
+export const ReviewCard = ({
+  avatarUri,
+  name,
+  rate,
+  comment,
+  className
+}: ReviewCardProps) => {
   return (
-    <div className="flex h-[12.625rem] flex-col justify-center gap-4 rounded-2xl bg-white px-6 lg:max-w-[20.6875rem]">
+    <div
+      className={twMerge(
+        'flex h-[12.625rem] flex-col justify-center gap-4 rounded-2xl bg-white px-7 shadow-2xl md:max-w-[20.6875rem]',
+        className
+      )}
+    >
       <div className="flex items-center gap-4">
-        <div className="h-[3.625rem] w-[3.625rem] rounded-full bg-red-500">
-          {avatarUri}
-        </div>
+        <img className="h-[3.625rem] w-[3.625rem]" src={avatarUri} />
 
         <div className="flex flex-col justify-center">
           <span className="text-[1.75rem] font-medium text-black">{name}</span>
-          {/* TODO: Complete rating */}
-          <div className="flex h-[1.3125rem] w-full gap-x-2">
-            <StarIcon className="text-yellow-500" />
-            <StarIcon className="text-yellow-500" />
-            <StarIcon className="text-yellow-500" />
-            <StarIcon className="text-yellow-500" />
-            <StartHalfIcon className="text-yellow-500" />
-          </div>
+          <RateStars rate={rate} />
         </div>
       </div>
 

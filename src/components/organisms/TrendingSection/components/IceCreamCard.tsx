@@ -40,18 +40,18 @@ export const IceCreamCard = ({
   return (
     <div
       className={twMerge(
-        'flex w-full flex-col items-center gap-5 rounded-3xl border border-white/40 bg-black/15 px-8 backdrop-blur-lg md:gap-0 lg:flex-row',
+        'flex w-full flex-col items-center rounded-3xl border border-white/40 bg-black/15 px-8 backdrop-blur-lg md:gap-0 lg:flex-row',
         cn({ 'bg-white text-black': isTrendy })
       )}
     >
       <img
         src={path}
         alt={name}
-        className="h-[16rem] w-[16rem] lg:h-[13.5625rem] lg:w-[13.5625rem] xl:h-[16rem] xl:w-[16rem]"
+        className="h-[16rem] w-[16rem] lg:h-[13.5625rem] lg:w-[13.5625rem] xl:h-[18rem] xl:w-[18rem]"
       />
 
-      <div className="flex w-full flex-col gap-8 pb-8 md:gap-4 lg:py-8 xl:px-8 xl:py-0">
-        <h2 className="text-center text-[1.75rem] font-semibold md:text-left md:text-2xl md:font-medium">
+      <div className="flex w-full flex-col gap-4 pb-8 lg:gap-6 lg:py-8 xl:px-8 xl:py-0">
+        <h2 className="text-center text-3xl font-semibold md:text-left md:text-2xl md:text-[1.75rem] md:font-medium">
           {name}
         </h2>
 
