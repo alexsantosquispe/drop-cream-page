@@ -4,7 +4,7 @@ import { translations } from '../../../../constants/translations';
 export const TitleWrapper = () => {
   return (
     <div className="flex w-full flex-col justify-center gap-y-6 md:max-w-[41.1875rem] md:gap-y-8">
-      <h1 className="text-[4.25rem] leading-14 font-bold md:text-left md:text-[7.5rem] md:leading-[5.85rem] md:font-semibold lg:leading-[6.875rem]">
+      <h1 className="text-[3.75rem] leading-14 font-bold md:text-left md:text-[7.5rem] md:leading-[5.85rem] md:font-semibold lg:leading-[6.875rem]">
         {translations.content.title.line1}
         <br />
         {translations.content.title.line2}

@@ -14,13 +14,13 @@ const menuItemStyle =
 
 const Header = () => {
   return (
-    <header className="flex h-[4.625rem] w-full items-center justify-between">
-      <div className="flex items-center gap-x-4">
+    <header className="flex w-full items-center justify-between py-2 md:h-[4.625rem] md:p-0">
+      <div className="flex items-center gap-x-2 pl-4 md:gap-x-4">
         <img
           src="/img/ice-cream-cone.png"
-          className="h-[4.625rem] w-[4.625rem]"
+          className="h-[3rem] w-[3rem] md:h-[4.625rem] md:w-[4.625rem]"
         />
-        <span className="max-w-[6.3125rem] text-[1.75rem] leading-[26px] font-black">
+        <span className="max-w-[6.3125rem] text-lg leading-5 font-black md:text-[1.75rem] md:leading-[1.625rem]">
           {translations.header.title}
         </span>
       </div>
