@@ -1,6 +1,7 @@
 import { MenuIcon } from '../../icons/MenuIcon';
 import { SearchIcon } from '../../icons/SearchIcon';
 import { translations } from '../../constants/translations';
+import { twMerge } from 'tailwind-merge';
 
 const menuItems = [
   translations.header.menu.home,
@@ -24,7 +25,7 @@ const Header = () => {
         </span>
       </div>
 
-      <nav className="hidden text-2xl md:flex">
+      <nav className="hidden text-2xl md:flex md:self-center">
         <ul className="flex items-center gap-x-4">
           {menuItems.map((item) => (
             <li key={item} className={menuItemStyle}>
@@ -37,7 +38,7 @@ const Header = () => {
         </ul>
       </nav>
 
-      <div className={menuItemStyle}>
+      <div className={twMerge(menuItemStyle, 'md:hidden')}>
         <MenuIcon className="size-8" />
       </div>
     </header>

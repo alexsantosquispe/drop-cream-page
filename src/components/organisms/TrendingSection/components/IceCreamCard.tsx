@@ -14,6 +14,7 @@ interface IceCreamCardProps {
   isTrendy?: boolean;
 }
 
+const zoomImageEffect = 'transition duration-300 ease-in-out hover:scale-125';
 const cardButtonStyle = 'h-10 rounded-[0.4375rem] p-0 text-lg';
 
 export const IceCreamCard = ({
@@ -40,14 +41,17 @@ export const IceCreamCard = ({
   return (
     <div
       className={twMerge(
-        'flex w-full flex-col items-center rounded-3xl border border-white/40 bg-black/15 px-8 backdrop-blur-lg md:gap-0 lg:flex-row',
+        'flex w-full flex-col items-center overflow-hidden rounded-3xl border border-white/40 bg-black/15 px-8 backdrop-blur-lg md:gap-0 lg:flex-row',
         cn({ 'bg-white text-black': isTrendy })
       )}
     >
       <img
         src={path}
         alt={name}
-        className="h-[16rem] w-[16rem] lg:h-[13.5625rem] lg:w-[13.5625rem] xl:h-[18rem] xl:w-[18rem]"
+        className={twMerge(
+          'h-[16rem] w-[16rem] lg:h-[13.5625rem] lg:w-[13.5625rem] xl:h-[18rem] xl:w-[18rem]',
+          zoomImageEffect
+        )}
       />
 
       <div className="flex w-full flex-col gap-4 pb-8 lg:gap-6 lg:py-8 xl:px-8 xl:py-0">
